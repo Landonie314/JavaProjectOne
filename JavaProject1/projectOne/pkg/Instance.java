@@ -2,7 +2,7 @@ package projectOne.pkg;
 
 public class Instance {
 
-	//Varibles
+	//Variables
 	private String outlook;
 	private int temperature;
 	private int humidity;
@@ -24,6 +24,7 @@ public class Instance {
 		windy = w;
 	}
 	
+	//Setters and getters
 	public String getOutlook() {
 		return outlook;
 	}
@@ -32,6 +33,29 @@ public class Instance {
 		outlook = o;
 	}
 	
+	public int getTemperature() {
+		return temperature;
+	}
+	
+	public void setTemperature(int t) {
+		temperature = t;
+	}
+	
+	public int getHumidity() {
+		return humidity;
+	}
+	
+	public void setHumidity(int h) {
+		humidity = h;
+	}
+	
+	public boolean getWindy() {
+		return windy;
+	}
+	
+	public void setWindy(boolean w) {
+		windy = w;
+	}
 	
 	
 }
