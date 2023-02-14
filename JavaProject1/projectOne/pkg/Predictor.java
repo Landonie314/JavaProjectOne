@@ -14,7 +14,7 @@ public class Predictor {
 
 
 
-
+/*
 	private void readFile () {
 		BufferedReader lineReader = null;
 		try {
@@ -122,7 +122,7 @@ public class Predictor {
 	}	
 }
 
-
+*/
 
 
 
