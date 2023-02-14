@@ -57,6 +57,6 @@ public class Instance {
 	}
 	
 	public String toString () {
-		return outlook + " " + temperature + " " + humidity + " " + windy;
+		return "outlook: " + outlook + " temperature: " + temperature + " humidity: " + humidity + " windy: " + windy;
 	}
 }
