@@ -1,15 +1,25 @@
 package projectOne.pkg;
 import java.io.*;
+import java.util.ArrayList;
 
 public class Predictor {
 	private String className;
 	private String fileName;
+	private int size;
+	private static final int MAX_SIZE = 100;
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		 ArrayList <Instance> list = new ArrayList<Instance>();
+		
+		Instance first = new Instance("Sunny", 80, 80, false);
+		System.out.println(first);
+		list.add(first);
+		
+		
 	}
-
+}
 
 
 

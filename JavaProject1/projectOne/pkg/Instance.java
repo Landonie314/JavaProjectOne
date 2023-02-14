@@ -7,14 +7,13 @@ public class Instance {
 	private int temperature;
 	private int humidity;
 	private boolean windy;
-	private boolean play;
+	
 	
 	public Instance() {
 		outlook = "";
 		temperature = 0;
 		humidity = 0;
 		windy = false;
-		play = true;
 	}
 	
 	public Instance(String o, int t, int h, boolean w) {
@@ -29,33 +28,35 @@ public class Instance {
 		return outlook;
 	}
 	
-	public void setOutlook(String o) {
-		outlook = o;
+	public void setOutlook(String outlook) {
+		this.outlook = outlook;
 	}
 	
 	public int getTemperature() {
 		return temperature;
 	}
 	
-	public void setTemperature(int t) {
-		temperature = t;
+	public void setTemperature(int temperature) {
+		this.temperature = temperature;
 	}
 	
 	public int getHumidity() {
 		return humidity;
 	}
 	
-	public void setHumidity(int h) {
-		humidity = h;
+	public void setHumidity(int humidity) {
+		this.humidity = humidity;
 	}
 	
 	public boolean getWindy() {
 		return windy;
 	}
 	
-	public void setWindy(boolean w) {
-		windy = w;
+	public void setWindy(boolean windy) {
+		this.windy = windy;
 	}
 	
-	
+	public String toString () {
+		return outlook + " " + temperature + " " + humidity + " " + windy;
+	}
 }
