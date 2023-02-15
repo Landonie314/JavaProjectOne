@@ -12,4 +12,3 @@ sunny,75,70,true,yes
 overcast,72,90,true,yes
 overcast,81,75,false,yes
 rainy,71,91,true,no
-

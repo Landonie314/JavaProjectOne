@@ -1,1 +1,0 @@
-sunny,85,85,false,Tennissunny,80,90,true,Swimmingovercast,83,86,false,Tennisrainy,70,96,false,Tennisrainy,68,80,false,Tennisrainy,65,70,true,Video Gamesovercast,64,65,true,Runningsunny,72,95,false,Tennissunny,69,70,false,Tennisrainy,75,80,false,Tennissunny,75,70,true,Swimmingovercast,72,90,true,Runningovercast,81,75,false,Tennisrainy,71,91,true,Video Games
