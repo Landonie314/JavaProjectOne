@@ -13,7 +13,6 @@ overcast,72,90,true,running
 overcast,81,75,false,tennis
 rainy,71,91,true,video games
 sunny,90,30,true,swimming
-<<<<<<< HEAD
 overcast,96,1,false,tennis
 rainy,18,41,false,tennis
 rainy,78,92,false,tennis
@@ -25,8 +24,3 @@ sunny,90,30,true,swimming
 overcast,21,98,false,tennis
 overcast,51,57,false,tennis
 overcast,61,57,false,tennis
-=======
-sunny,97,10,false,tennis
-overcast,64,58,false,tennis
-sunny,5,77,false,tennis
->>>>>>> branch 'main' of https://github.com/Landonie314/JavaProjectOne.git
