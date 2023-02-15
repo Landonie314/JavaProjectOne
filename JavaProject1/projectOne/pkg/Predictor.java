@@ -2,30 +2,35 @@ package projectOne.pkg;
 import java.io.*;
 import java.util.ArrayList;
 
+//What is the point of the predictor class??
 public class Predictor {
-	private String className;
 	private String fileName;
+	private String activity;
+	private boolean play;
+	private ArrayList <Instance> pre = new ArrayList<Instance>();
+		
 	
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		 ArrayList <Instance> list = new ArrayList<Instance>();
+		//Instance first = new Instance("Sunny", 80, 80, false);
+		//Instance second = new Instance("Rainy", 30, 30, false);
+		//Instance third = new Instance("cloudy", 80, 10, true);
 		
-		Instance first = new Instance("Sunny", 80, 80, false);
-		System.out.println(first);
-		list.add(first);
-		Instance second = new Instance("Rainy", 30, 30, false);
-		Instance third = new Instance("cloudy", 80, 10, true);
-		list.add(second);
-		list.add(third);
 		
-	}
-}
+		public Predictor(String fn) {
+			fileName = fn;
+			readFile();
+			
+		}
+		
+		//adds instance to the ArrayList of instances
+		public void addInstance(Instance i) {
+			pre.add(i);
+		}
 
 
 
 
-/*
+
+		//Reads in the arff file
 	private void readFile () {
 		BufferedReader lineReader = null;
 		try {
@@ -33,38 +38,28 @@ public class Predictor {
 			lineReader = new BufferedReader(fr);
 			String line = null;
 			while ((line = lineReader.readLine())!=null) {
-				String name = lineReader.readLine();
-				String id = lineReader.readLine();
-				if (line.equals("student")) {
-					String gpaString = lineReader.readLine();
-					addStudent(new Student(name,id,Double.parseDouble(gpaString)));
-				}
-				else if (line.equals("instructor")) {
-					String email = lineReader.readLine();
-					addInstructor(new Instructor(name,id,email));
-				}
-				else {
-					System.err.println("error: unnknown person type");
-				}			}
+				String outlook = lineReader.readLine();
+				String temperature = lineReader.readLine();
+				String humidity = lineReader.readLine();
+				String windy = lineReader.readLine();
+				String play = lineReader.readLine();
+					addInstance(new Instance(outlook,Integer.parseInt(temperature),Integer.parseInt(humidity), Boolean.parseBoolean(windy), play));
+					
+				
+				}			
 		} catch (Exception e) {
 			System.err.println("there was a problem with the file reader, try different read type.");
 			try {
 				lineReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(fileName.substring(1))));
 				String line = null;
 				while ((line = lineReader.readLine())!=null) {
-					String name = lineReader.readLine();
-					String id = lineReader.readLine();
-					if (line.equals("student")) {
-						String gpaString = lineReader.readLine();
-						addStudent(new Student(name,id,Double.parseDouble(gpaString)));
-					}
-					else if (line.equals("instructor")) {
-						String email = lineReader.readLine();
-						addInstructor(new Instructor(name,id,email));
-					}
-					else {
-						System.err.println("error: unnknown person type");
-					}				}
+					String outlook = lineReader.readLine();
+					String temperature = lineReader.readLine();
+					String humidity = lineReader.readLine();
+					String windy = lineReader.readLine();
+					String play = lineReader.readLine();
+					addInstance(new Instance(outlook,Integer.parseInt(temperature),Integer.parseInt(humidity), Boolean.parseBoolean(windy), play));
+						}
 			} catch (Exception e2) {
 				System.err.println("there was a problem with the file reader, try again.  either no such file or format error");
 			} finally {
@@ -88,15 +83,16 @@ public class Predictor {
 	public void writeFile () {
 		// overloaded method: this calls doWrite with file used to read data
 		// use this for saving data between runs
-		doWrite(fileName);
+		/////doWrite(fileName);
 	} // end of writeFile method
 
 	public void writeFile(String altFileName) {
 		// overloaded method: this calls doWrite with different file name 
 		// use this for testing write
-		doWrite(altFileName);		
+		///////doWrite(altFileName);		
 	}// end of writeFile method
 
+	/*
 	private void doWrite(String fn) {
 		// this method writes all of the data in the persons array to a file
 		try
@@ -131,9 +127,9 @@ public class Predictor {
 			System.err.println("Didn't save to " + fn);
 		}
 	}	
-}
 
 */
 
 
 
+}

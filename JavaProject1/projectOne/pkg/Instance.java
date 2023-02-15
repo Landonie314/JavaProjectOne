@@ -7,6 +7,7 @@ public class Instance {
 	private int temperature;
 	private int humidity;
 	private boolean windy;
+	private String play;
 	
 	
 	public Instance() {
@@ -14,13 +15,15 @@ public class Instance {
 		temperature = 0;
 		humidity = 0;
 		windy = false;
+		play = "no";
 	}
 	
-	public Instance(String o, int t, int h, boolean w) {
+	public Instance(String o, int t, int h, boolean w, String p) {
 		outlook = o;
 		temperature = t;
 		humidity = h;
 		windy = w;
+		play = p;
 	}
 	
 	//Setters and getters
@@ -56,7 +59,15 @@ public class Instance {
 		this.windy = windy;
 	}
 	
+	public String getPlay() {
+		return play;
+	}
+	
+	public void setPlay(String play) {
+		this.play = play;
+	}
+	
 	public String toString () {
-		return "outlook: " + outlook + " temperature: " + temperature + " humidity: " + humidity + " windy: " + windy;
+		return "outlook: " + outlook + " temperature: " + temperature + " humidity: " + humidity + " windy: " + windy + " play: " + play;
 	}
 }
