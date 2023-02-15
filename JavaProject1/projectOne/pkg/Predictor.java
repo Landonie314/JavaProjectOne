@@ -14,6 +14,7 @@ public class Predictor {
 	private int big, small, coin;
 	private String [] weather;
 	private String [] activity;
+	private String thing;
 		
 	
 		
@@ -83,6 +84,27 @@ public class Predictor {
 			}
 			
 			return yep;
+		}
+		public String getActivity(String outlook, int temp, int humid, boolean wind) {
+			
+					//If it is windy and it is sunny out
+				if(wind == true && outlook.equals("sunny")) {
+					thing = "swimming";
+				}
+				//If it is not windy
+				else if(wind == false) {
+					thing = "tennis";
+				}
+				//If it is windy and rainy, stay inside
+				else if(wind == true && outlook.equals("rainy")) {
+					thing = "video games";
+				}
+				//any other conditions and you go for a run
+				else {
+					thing = "running";
+				}
+			
+			return thing;
 		}
 		
 		//toString method for predictor class

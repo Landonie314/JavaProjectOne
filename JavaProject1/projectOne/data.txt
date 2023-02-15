@@ -27,6 +27,14 @@ overcast,72,90,true,running
 overcast,81,75,false,tennis
 rainy,71,91,true,video games
 sunny,90,30,true,swimming
-sunny,16,48,false,tennis
-rainy,89,12,false,tennis
-sunny,83,12,false,tennis
+overcast,96,1,false,tennis
+rainy,18,41,false,tennis
+rainy,78,92,false,tennis
+sunny,90,30,true,swimming
+overcast,44,27,false,tennis
+sunny,11,60,false,tennis
+rainy,39,50,false,tennis
+sunny,90,30,true,swimming
+overcast,21,98,false,tennis
+overcast,51,57,false,tennis
+overcast,61,57,false,tennis

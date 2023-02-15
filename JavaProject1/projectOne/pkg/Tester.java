@@ -29,6 +29,11 @@ public class Tester {
 		System.out.println("\nTesting changing an attribute");
 		System.out.println(myPredictor);
 		
+		//Predict activity
+		String test = myPredictor.getActivity("sunny", 97, 80, true);
+		System.out.println("\nPrint prediction");
+		System.out.println(test);
+		
 		//Calls change Activity
 		myPredictor.changeActivity();
 		System.out.println("Test read after changes");
@@ -37,7 +42,7 @@ public class Tester {
 		myPredictor.writeFile("./projectOne/data.txt");
 		
 		//Writes to the file we store all the data in at the end of the program run
-		//myPredictor.writeFile();
+		myPredictor.writeFile();
 		
 		
 		
