@@ -6,15 +6,9 @@ import java.util.ArrayList;
 //What is the point of the predictor class??
 public class Predictor {
 	private String fileName;
-	private String activity;
-	private boolean play;
-	private ArrayList<String> act = new ArrayList<String>();
 	private ArrayList <Instance> pre = new ArrayList<Instance>();
 		
 	
-		//Instance first = new Instance("Sunny", 80, 80, false);
-		//Instance second = new Instance("Rainy", 30, 30, false);
-		//Instance third = new Instance("cloudy", 80, 10, true);
 		
 		//Constructor
 		public Predictor(String fn) {
@@ -29,23 +23,28 @@ public class Predictor {
 		}
 		
 		public void changeActivity() {
-			//Iterator <Instance> iter = pre.iterator();
-			//while(iter.hasNext()) {
-					
-			//}
+			
+			//cycles the ArrayList pre
 			for(int i=0; i<pre.size(); i++) {
+				//Makes sure there is an instance
+				if(pre.get(i) != null) {
+					//If it is windy and it is sunny out
 				if(pre.get(i).getWindy() == true && pre.get(i).getOutlook().equals("sunny")) {
 					pre.get(i).setPlay("Swimming");
 				}
+				//If it is not windy
 				else if(pre.get(i).getWindy() == false) {
 					pre.get(i).setPlay("Tennis");
 				}
+				//If it is windy and rainy, stay inside
 				else if(pre.get(i).getWindy() == true && pre.get(i).getOutlook().equals("rainy")) {
 					pre.get(i).setPlay("Video Games");
 				}
+				//any other conditions and you go for a run
 				else {
 					pre.get(i).setPlay("Running");
 				}
+			}
 			}
 		}
 
@@ -109,16 +108,16 @@ public class Predictor {
 	public void writeFile () {
 		// overloaded method: this calls doWrite with file used to read data
 		// use this for saving data between runs
-		/////doWrite(fileName);
+		doWrite(fileName);
 	} // end of writeFile method
 
 	public void writeFile(String altFileName) {
 		// overloaded method: this calls doWrite with different file name 
 		// use this for testing write
-		///////doWrite(altFileName);		
+		doWrite(altFileName);		
 	}// end of writeFile method
 
-	/*
+	
 	private void doWrite(String fn) {
 		// this method writes all of the data in the persons array to a file
 		try
@@ -127,22 +126,10 @@ public class Predictor {
 			FileWriter fw = new FileWriter(fn);
 			BufferedWriter myOutfile = new BufferedWriter(fw);			
 
-			for (int i = 0; i < size; i++) {
-				Person person = people[i];
-				if (person instanceof Student) {
-					myOutfile.write ("student\n");
-					myOutfile.write (person.getName()+"\n");
-					myOutfile.write (person.getId()+"\n");
-					myOutfile.write (((Student) person).getGpa()+"\n");
-				}
-				else if (person instanceof Instructor) {
-					myOutfile.write ("instructor\n");
-					myOutfile.write (person.getName()+"\n");
-					myOutfile.write (person.getId()+"\n");
-					myOutfile.write (((Instructor) person).getEmail()+"\n");
-				}	
-				else {
-					System.err.println("error in array, instance type not found");
+			for (int i = 0; i < pre.size(); i++) {
+				if(pre.get(i) != null) {
+				myOutfile.write (pre.get(i).getOutlook() + "," + pre.get(i).getTemperature() + "," + pre.get(i).getHumidity() + "," + pre.get(i).getWindy() + "," + pre.get(i).getPlay());
+				
 				}
 			}
 			myOutfile.flush();
@@ -154,7 +141,7 @@ public class Predictor {
 		}
 	}	
 
-*/
+
 
 
 
