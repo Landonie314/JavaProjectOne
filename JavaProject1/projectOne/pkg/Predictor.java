@@ -10,6 +10,7 @@ public class Predictor {
 	private String fileName;
 	private ArrayList <Instance> pre;
 	private Random rng;
+	//All members needed for a randomized instance
 	private Instance yep;
 	private int big, small, coin;
 	private String [] weather;
@@ -65,6 +66,7 @@ public class Predictor {
 		}
 		
 		//makes the random Instance
+		//Creates number ranges and then assigns values based on random numbers
 		public Instance randomInstance() {
 		 yep = new Instance();
 			big = rng.nextInt(100);
@@ -83,6 +85,7 @@ public class Predictor {
 				yep.setWindy(true);
 			}
 			
+			//returns the randomized instance
 			return yep;
 		}
 		public String getActivity(String outlook, int temp, int humid, boolean wind) {
@@ -118,7 +121,7 @@ public class Predictor {
 		
 
 
-		//Reads in the arff file
+		//Reads in the arff file stolen from complexRoster
 	private void readFile () {
 		BufferedReader lineReader = null;
 		try {
