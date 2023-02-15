@@ -51,7 +51,13 @@ public class Predictor {
 			}
 		}
 
-
+		public String toString() {
+			String toReturn = "";
+			for(Instance instance: pre) {
+				toReturn += instance + "\n";
+			}
+			return toReturn;
+		}
 
 
 		//Reads in the arff file

@@ -8,13 +8,15 @@ public class Tester {
 		
 		Predictor myPredictor = new Predictor("./projectOne/data2.txt");
 		System.out.println("Test read of the file");
+		//prints out the ArrayList of instances
 		System.out.println(myPredictor);
 		
-		/*
+		//Calls change Activity
 		myPredictor.changeActivity();
 		System.out.println("Test read after changes");
 		System.out.println(myPredictor);
-		*/
+		
+		
 		
 	}
 
