@@ -1,3 +1,5 @@
+//Landon Jones
+//Project 1
 package projectOne.pkg;
 import java.io.*;
 import java.util.*;
@@ -60,6 +62,7 @@ public class Predictor {
 			lineReader = new BufferedReader(fr);
 			String line = null;
 			while ((line = lineReader.readLine())!=null) {
+				System.out.println(line);
 				//Array of strings. Each string is separated by a comma on the line so the token stores each word.
 				String[] tokens = line.split(",");
 				String outlook = tokens[0];
@@ -72,11 +75,13 @@ public class Predictor {
 				
 				}			
 		} catch (Exception e) {
+			e.printStackTrace();
 			System.err.println("there was a problem with the file reader, try different read type.");
 			try {
 				lineReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(fileName.substring(1))));
 				String line = null;
 				while ((line = lineReader.readLine())!=null) {
+					System.out.println(line);
 					//Array of strings. Each string is separated by a comma on the line so the token stores each word.
 					String[] tokens = line.split(",");
 					String outlook = tokens[0];
@@ -87,6 +92,7 @@ public class Predictor {
 					addInstance(new Instance(outlook,Integer.parseInt(temperature),Integer.parseInt(humidity), Boolean.parseBoolean(windy), play));
 						}
 			} catch (Exception e2) {
+				e.printStackTrace();
 				System.err.println("there was a problem with the file reader, try again.  either no such file or format error");
 			} finally {
 				if (lineReader != null)
@@ -127,6 +133,11 @@ public class Predictor {
 			FileWriter fw = new FileWriter(fn);
 			BufferedWriter myOutfile = new BufferedWriter(fw);			
 
+			/*
+			for(Instance instance : pre) {
+				
+			}
+			*/
 			for (int i = 0; i < pre.size(); i++) {
 				if(pre.get(i) != null) {
 				myOutfile.write (pre.get(i).getOutlook() + "," + pre.get(i).getTemperature() + "," + pre.get(i).getHumidity() + "," + pre.get(i).getWindy() + "," + pre.get(i).getPlay());

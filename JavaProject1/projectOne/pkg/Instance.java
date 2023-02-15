@@ -1,3 +1,5 @@
+//Landon Jones
+//Project 1
 package projectOne.pkg;
 
 public class Instance {
