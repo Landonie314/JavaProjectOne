@@ -9,7 +9,7 @@ public class Instance {
 	private boolean windy;
 	private String play;
 	
-	
+	//default constructor
 	public Instance() {
 		outlook = "";
 		temperature = 0;
@@ -18,6 +18,7 @@ public class Instance {
 		play = "no";
 	}
 	
+	//constructor when pulling from file
 	public Instance(String o, int t, int h, boolean w, String p) {
 		outlook = o;
 		temperature = t;
@@ -67,6 +68,7 @@ public class Instance {
 		this.play = play;
 	}
 	
+	//toString method
 	public String toString () {
 		return "outlook: " + outlook + " temperature: " + temperature + " humidity: " + humidity + " windy: " + windy + " play: " + play;
 	}

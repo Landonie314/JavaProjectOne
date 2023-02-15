@@ -1,5 +1,6 @@
 package projectOne.pkg;
 import java.io.*;
+import java.util.*;
 import java.util.ArrayList;
 
 //What is the point of the predictor class??
@@ -7,6 +8,7 @@ public class Predictor {
 	private String fileName;
 	private String activity;
 	private boolean play;
+	private ArrayList<String> act = new ArrayList<String>();
 	private ArrayList <Instance> pre = new ArrayList<Instance>();
 		
 	
@@ -14,7 +16,7 @@ public class Predictor {
 		//Instance second = new Instance("Rainy", 30, 30, false);
 		//Instance third = new Instance("cloudy", 80, 10, true);
 		
-		
+		//Constructor
 		public Predictor(String fn) {
 			fileName = fn;
 			readFile();
@@ -25,7 +27,27 @@ public class Predictor {
 		public void addInstance(Instance i) {
 			pre.add(i);
 		}
-
+		
+		public void changeActivity() {
+			//Iterator <Instance> iter = pre.iterator();
+			//while(iter.hasNext()) {
+					
+			//}
+			for(int i=0; i<pre.size(); i++) {
+				if(pre.get(i).getWindy() == true && pre.get(i).getOutlook().equals("sunny")) {
+					pre.get(i).setPlay("Swimming");
+				}
+				else if(pre.get(i).getWindy() == false) {
+					pre.get(i).setPlay("Tennis");
+				}
+				else if(pre.get(i).getWindy() == true && pre.get(i).getOutlook().equals("rainy")) {
+					pre.get(i).setPlay("Video Games");
+				}
+				else {
+					pre.get(i).setPlay("Running");
+				}
+			}
+		}
 
 
 
@@ -38,11 +60,13 @@ public class Predictor {
 			lineReader = new BufferedReader(fr);
 			String line = null;
 			while ((line = lineReader.readLine())!=null) {
-				String outlook = lineReader.readLine();
-				String temperature = lineReader.readLine();
-				String humidity = lineReader.readLine();
-				String windy = lineReader.readLine();
-				String play = lineReader.readLine();
+				//Array of strings. Each string is sepaSrated by a comma on the line so the token stores each word.
+				String[] tokens = line.split(",");
+				String outlook = tokens[0];
+				String temperature = tokens[1];
+				String humidity = tokens[2];
+				String windy = tokens[3];
+				String play = tokens[4];
 					addInstance(new Instance(outlook,Integer.parseInt(temperature),Integer.parseInt(humidity), Boolean.parseBoolean(windy), play));
 					
 				
@@ -53,11 +77,13 @@ public class Predictor {
 				lineReader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(fileName.substring(1))));
 				String line = null;
 				while ((line = lineReader.readLine())!=null) {
-					String outlook = lineReader.readLine();
-					String temperature = lineReader.readLine();
-					String humidity = lineReader.readLine();
-					String windy = lineReader.readLine();
-					String play = lineReader.readLine();
+					//Array of strings. Each string is separated by a comma on the line so the token stores each word.
+					String[] tokens = line.split(",");
+					String outlook = tokens[0];
+					String temperature = tokens[1];
+					String humidity = tokens[2];
+					String windy = tokens[3];
+					String play = tokens[4];
 					addInstance(new Instance(outlook,Integer.parseInt(temperature),Integer.parseInt(humidity), Boolean.parseBoolean(windy), play));
 						}
 			} catch (Exception e2) {
