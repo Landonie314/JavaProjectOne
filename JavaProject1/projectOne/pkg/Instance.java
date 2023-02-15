@@ -72,6 +72,8 @@ public class Instance {
 	
 	//toString method
 	public String toString () {
-		return "outlook: " + outlook + " temperature: " + temperature + " humidity: " + humidity + " windy: " + windy + " play: " + play;
+		return "outlook: " + outlook + ", temperature: " + temperature + ", humidity: " + humidity + ", windy: " + windy + ", play: " + play;
+		//probably should use activity instead of play for grammatical reasons but I am leaving it as play because I don't want to be counted
+		//off for changing it
 	}
 }
