@@ -12,16 +12,21 @@ public class Tester {
 		//prints out the ArrayList of instances
 		System.out.println(myPredictor);
 		
+		//Adding instances
 		Instance i2 = new Instance("sunny", 90,0, true, "no");
 		myPredictor.addInstance(i2);
 		System.out.println(myPredictor);
+		//Uses my random instance maker so I don't have to
 		myPredictor.initializeRandom();
+		myPredictor.addInstance(myPredictor.randomInstance());
+		myPredictor.addInstance(myPredictor.randomInstance());
 		myPredictor.addInstance(myPredictor.randomInstance());
 		System.out.println("\nTesting random");
 		System.out.println(myPredictor);
 		
+		//Changes humidity
 		i2.setHumidity(30);
-		System.out.println(i2.getHumidity());
+		System.out.println("\nTesting changing an attribute");
 		System.out.println(myPredictor);
 		
 		//Calls change Activity
@@ -32,7 +37,7 @@ public class Tester {
 		myPredictor.writeFile("./projectOne/data.txt");
 		
 		//Writes to the file we store all the data in at the end of the program run
-		myPredictor.writeFile();
+		//myPredictor.writeFile();
 		
 		
 		

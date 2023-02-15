@@ -1,19 +1,32 @@
-sunny,85,85,false,Tennis
-sunny,80,90,true,Swimming
-overcast,83,86,false,Tennis
-rainy,70,96,false,Tennis
-rainy,68,80,false,Tennis
-rainy,65,70,true,Video Games
-overcast,64,65,true,Running
-sunny,72,95,false,Tennis
-sunny,69,70,false,Tennis
-rainy,75,80,false,Tennis
-sunny,75,70,true,Swimming
-overcast,72,90,true,Running
-overcast,81,75,false,Tennis
-rainy,71,91,true,Video Games
-sunny,90,0,true,Swimming
-sunny,90,0,true,Swimming
-sunny,90,0,true,Swimming
-sunny,90,0,true,Swimming
-sunny,90,30,true,Swimming
+sunny,85,85,false,tennis
+sunny,80,90,true,swimming
+overcast,83,86,false,tennis
+rainy,70,96,false,tennis
+rainy,68,80,false,tennis
+rainy,65,70,true,video games
+overcast,64,65,true,running
+sunny,72,95,false,tennis
+sunny,69,70,false,tennis
+rainy,75,80,false,tennis
+sunny,75,70,true,swimming
+overcast,72,90,true,running
+overcast,81,75,false,tennis
+rainy,71,91,true,video games
+sunny,85,85,false,tennis
+sunny,80,90,true,swimming
+overcast,83,86,false,tennis
+rainy,70,96,false,tennis
+rainy,68,80,false,tennis
+rainy,65,70,true,video games
+overcast,64,65,true,running
+sunny,72,95,false,tennis
+sunny,69,70,false,tennis
+rainy,75,80,false,tennis
+sunny,75,70,true,swimming
+overcast,72,90,true,running
+overcast,81,75,false,tennis
+rainy,71,91,true,video games
+sunny,90,30,true,swimming
+sunny,16,48,false,tennis
+rainy,89,12,false,tennis
+sunny,83,12,false,tennis
