@@ -8,15 +8,15 @@ import java.util.ArrayList;
 //What is the point of the predictor class??
 public class Predictor {
 	private String fileName;
-	private ArrayList <Instance> pre = new ArrayList<Instance>();
+	private ArrayList <Instance> pre;
 		
 	
 		
 		//Constructor
 		public Predictor(String fn) {
+			pre = new ArrayList<Instance>();
 			fileName = fn;
 			readFile();
-			
 		}
 		
 		//adds instance to the ArrayList of instances
@@ -146,7 +146,7 @@ public class Predictor {
 			*/
 			for (int i = 0; i < pre.size(); i++) {
 				if(pre.get(i) != null) {
-				myOutfile.write (pre.get(i).getOutlook() + "," + pre.get(i).getTemperature() + "," + pre.get(i).getHumidity() + "," + pre.get(i).getWindy() + "," + pre.get(i).getPlay());
+				myOutfile.write (pre.get(i).getOutlook() + "," + pre.get(i).getTemperature() + "," + pre.get(i).getHumidity() + "," + pre.get(i).getWindy() + "," + pre.get(i).getPlay() + "\n");
 				
 				}
 			}

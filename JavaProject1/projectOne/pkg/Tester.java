@@ -17,6 +17,8 @@ public class Tester {
 		System.out.println(myPredictor);
 		
 		
+		myPredictor.writeFile("./projectOne/data.txt");
+		
 		
 	}
 
