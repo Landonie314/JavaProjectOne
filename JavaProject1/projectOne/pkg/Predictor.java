@@ -22,6 +22,7 @@ public class Predictor {
 			pre.add(i);
 		}
 		
+		//Changes the activity based on the day's attributes
 		public void changeActivity() {
 			
 			//cycles the ArrayList pre
@@ -59,7 +60,7 @@ public class Predictor {
 			lineReader = new BufferedReader(fr);
 			String line = null;
 			while ((line = lineReader.readLine())!=null) {
-				//Array of strings. Each string is sepaSrated by a comma on the line so the token stores each word.
+				//Array of strings. Each string is separated by a comma on the line so the token stores each word.
 				String[] tokens = line.split(",");
 				String outlook = tokens[0];
 				String temperature = tokens[1];

@@ -4,10 +4,14 @@ public class Tester {
 
 	public static void main(String[] args) {
 		
-		Predictor myPredictor = new Predictor("data.txt");
+		Predictor myPredictor = new Predictor("./JavaProject1/data.txt");
+		System.out.println("Test read of the file");
+		System.out.println(myPredictor);
 		
-		Instance first = new Instance("sunny", 80, 80, true, "no");
-		myPredictor.addInstance(first);
+		myPredictor.changeActivity();
+		System.out.println("Test read after changes");
+		System.out.println(myPredictor);
+		
 		
 	}
 
