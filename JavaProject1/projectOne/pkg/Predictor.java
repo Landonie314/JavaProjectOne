@@ -88,6 +88,7 @@ public class Predictor {
 			//returns the randomized instance
 			return yep;
 		}
+		//returns the activity based on scenerio
 		public String getActivity(String outlook, int temp, int humid, boolean wind) {
 			
 					//If it is windy and it is sunny out
@@ -110,6 +111,11 @@ public class Predictor {
 			return thing;
 		}
 		
+		//returns possible activities
+		public String getActivities(){		
+			String toReturn = "swimming, running, video games, tennis";
+			return toReturn;
+		}
 		//toString method for predictor class
 		public String toString() {
 			String toReturn = "";
@@ -119,7 +125,6 @@ public class Predictor {
 			return toReturn;
 		}
 		
-
 
 		//Reads in the arff file stolen from complexRoster
 	private void readFile () {
@@ -228,3 +233,4 @@ public class Predictor {
 
 
 }
+

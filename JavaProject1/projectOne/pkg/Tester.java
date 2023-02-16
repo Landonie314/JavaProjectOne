@@ -29,6 +29,10 @@ public class Tester {
 		System.out.println("\nTesting changing an attribute");
 		System.out.println(myPredictor);
 		
+		//Activity options
+		System.out.println("\nAvailable activities");
+		System.out.println(myPredictor.getActivities());
+		
 		//Predict activity
 		String test = myPredictor.getActivity("sunny", 97, 80, true);
 		System.out.println("\nPrint prediction");
@@ -50,3 +54,5 @@ public class Tester {
 
 
 }
+
+
